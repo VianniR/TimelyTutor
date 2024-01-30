@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timely Tutor</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- nav bar -->
+  <div class="hero is-link">
+    <div class="hero-head">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.html">
+          <img src="timely.png" width="48" length="48" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-cont>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" id="profile" href="profile.html">Profile</a>
+                <a class="dropdown-item sign-up" href="#">Sign Up</a>
+                <a class="dropdown-item log-in" href="#">Log In</a>
+                <a class="dropdown-item log-out" href="#">Log Out</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <img class="current-user-pfp" src="" alt="" onerror="emptyPfp(this)">
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <section class="hero is-small is-primary has-text-centered">
+      <div class="hero-body">
+        <h1 class="title">Timely Tutor</h1>
+        <h2 class="subtitle">Tutoring Made Easy</h2>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal Popup Sign Up -->
+  <div id="sign-up-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="sign-in-window">
+      <div class="modal-content">
+        <div class="box">
+          <p class="title">Sign Up</p>
+          <div class="not-enough-data has-background-danger has-text-white is-hidden">
+            Please fill out all boxes
+          </div>
+          <label class="label">Name</label>
+          <div class="control">
+            <input id="name-input" class="input" type="text" placeholder="">
+          </div>
+          <label class="label">Email</label>
+          <div class="control">
+            <input id="email-input" class="input" type="text" placeholder="">
+          </div>
+          <label class="label">Password</label>
+          <div class="control">
+            <input id="pswd-input" class="input" type="password" placeholder="">
+          </div>
+          <label class="label">Subject</label>
+          <div class="control">
+            <input id="subject-input" class="input" type="text" placeholder="">
+          </div>
+          <label class="label">Location</label>
+          <div class="control">
+            <input id="location-input" class="input" type="text" placeholder="">
+          </div>
+          <div id="sign-up-submit" class="button"> Sign Up </div>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- Modal Popup Log In -->
+  <div id="log-in-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="sign-in-window">
+      <div class="modal-content">
+        <div class="box">
+          <p class="title">Log In</p>
+          <div class="incorrect-user has-background-danger has-text-white is-hidden">
+            Incorrect username or password.
+          </div>
+          <label class="label">Email</label>
+          <div class="control">
+            <input id="login-email-input" class="input" type="text" placeholder="">
+          </div>
+          <label class="label">Password</label>
+          <div class="control">
+            <input id="login-pswd-input" class="input" type="password" placeholder="">
+          </div>
+          <div id="log-in-submit" class="button"> Log In </div>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close log-in-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- List of Tutors -->
+  <div class=columns>
+    <div class="column is-one-fifth">
+      <div class="has-background-grey-lighter right-bar">
+        <div class="field">
+          <label class="label">Search</label>
+          <div class="control">
+            <input id="searchbar" class="input" type="text" placeholder="Search Subjects">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tutorCards px-6 py-3 column">
+      <!--
+      <div class="tutor-card box is-flex p-0">
+        <div class="is-flex">
+          <div class="card-left-side py-4 pl-4 pr-2 has-background-grey-lighter">
+            <div class="is-flex">
+              <img src="https://m.media-amazon.com/images/I/91VV-H0j9jL._AC_SL1500_.jpg">
+              <div class="px-3">
+                <p class="title">Ryan Diaz</p>
+                <p class="subtitle">Math Tutor</p>
+              </div>
+            </div>
+            <div class="is-flex">
+              <a href="mailto:dr.steve2004@outlook.com?subject = Feedback&body = Message"
+                class="button is-info align-self-center">Request Tutor</a>
+              <div class="pl-6">
+                <p class="subtitle">Rating:</p>
+                <p>5 stars</p>
+              </div>
+            </div>
+          </div>
+          <div class="is-flex is-justify-content-left py-4 pl-4">
+            <p>Description</p>
+          </div>
+        </div>
+        <div class="map-image">
+          <figure class="image is-256x256 m-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13240.22251738801!2d-118.1290136!3d33.9396973!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5084d6c4d7987fbd!2sDowney%20City%20Library!5e0!3m2!1sen!2sus!4v1659551077465!5m2!1sen!2sus"
+              width="256" height="256" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <script src="index.js" defer></script>
+
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+
+  <!--used for utilizing Bootstrap documentation-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>

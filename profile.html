@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timely Tutor</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- nav bar -->
+  <div class="hero is-link">
+    <div class="hero-head">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.html">
+          <img src="timely.png" width="48" length="48" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-cont>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <section class="hero is-small is-primary has-text-centered">
+    <div class="hero-body">
+      <h1 class="title">Your Profile</h1>
+
+    </div>
+  </section>
+
+  <div class="columns">
+    <div class="column is-one-third">
+      <div class="right-bar mt-2">
+        <div class="py-6 is-flex is-justify-content-center ">
+          <img id="pfp" class="circle" src="https://bulma.io/images/placeholders/256x256.png" onerror="emptyPfp(this)">
+        </div>
+        <p class="subtitle is-5">Change Profile Picture</p>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+        <input id="image-url" class="input my-3" type="text" placeholder="Use url instead">
+      </div>
+    </div>
+    <div class="column is-two-thirds">
+      <div class="right-profile has-background-grey-lighter">
+        <div class="py-4">
+          <label class="label">Display Name</label>
+          <input id="profile-name" class="input" type="text" placeholder="">
+        </div>
+        <div class="py-4">
+          <label class="label">Description</label>
+          <input id="profile-desc" class="input" type="text" placeholder="">
+        </div>
+        <div class="py-4">
+          <label class="label">Subject</label>
+          <input id="profile-subject" class="input" type="text" placeholder="">
+        </div>
+        <div class="py-4">
+          <label class="label">Location HTML</label>
+          <input id="profile-location" class="input" type="text" placeholder="">
+          <div class="py-4">
+            <div class="button submit-changes is-primary">Submit Changes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="profile.js" defer></script>
+
+
+    <!--used for utilizing Bootstrap documentation-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>

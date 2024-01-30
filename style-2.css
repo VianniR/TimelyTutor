@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+circle{
+  display:block;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid red;
+  
+}
+
+img
+{
+  max-height: 100px;
+}
+
+.sign-in-window
+{
+  min-width: 30%;
+}
+
+.tutorCards{
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+.right-bar
+{
+  padding: 5%;
+  padding-bottom: 500%;
+}
+
+.no-tutors{
+  margin-top: 5%;
+}
+
+.tutor-card{
+  display: flex;
+  justify-content: space-between;
+  padding: 0%;
+}
+
+.card-left-side{
+  min-width: 350px;
+}
+
+.map-image
+{
+  padding: 0%;
+  margin: 0%;
+  max-height: 256px;
+  max-width: 256px;
+}
+
+.incorrect-user
+{
+  padding: 5%;
+  border-radius: 25px;
+}
+
+.not-enough-data{
+  padding: 5%;
+  border-radius: 25px;
+}
+
+.pfp-image{
+  border-radius: 50%;
+  height: 128px;
+  width: 128px;
+}
+
+.right-profile{
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-bottom: 50%;
+}
+
+.circle{
+  border-radius: 50%;
+  max-height: 200px;
+}
+
+.current-user-pfp{
+  border-radius: 50%;
+  max-height: 50px;
+}
